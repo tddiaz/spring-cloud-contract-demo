@@ -4,9 +4,6 @@ Contract.make {
     request {
         method 'GET'
         url '/credit-scores/12345'
-        headers {
-            contentType applicationJson()
-        }
     }
     response {
         status 200

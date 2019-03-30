@@ -16,13 +16,16 @@ public class CreditCardApplicationController {
 
     @PostMapping
     public CcApplicationResponse create(@RequestBody CcApplicationRequest request) {
-        CreditScoreResponse creditScoreResponse = restTemplate
-                .getForObject("http://localhost:8080/credit-scores/" + request.getCitizenNumber(), CreditScoreResponse.class);
+        final CreditScoreResponse creditScoreResponse = getCitizenCreditScore(request.getCitizenNumber());
 
         if (creditScoreResponse.isScoreHigh() && request.isCreditCardTypeGold()) {
             return CcApplicationResponse.applicationGranted();
         }
 
         throw new RuntimeException("Credit card type not yet implemented");
+    }
+
+    private CreditScoreResponse getCitizenCreditScore(String citizenNumber) {
+        return restTemplate.getForObject("http://localhost:8080/credit-scores/" + citizenNumber, CreditScoreResponse.class);
     }
 }
