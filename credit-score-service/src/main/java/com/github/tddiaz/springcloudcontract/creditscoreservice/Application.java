@@ -1,13 +1,13 @@
-package com.github.tddiaz.springcloudcontract.creditcardservice;
+package com.github.tddiaz.springcloudcontract.creditscoreservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CreditCardServiceApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CreditCardServiceApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
