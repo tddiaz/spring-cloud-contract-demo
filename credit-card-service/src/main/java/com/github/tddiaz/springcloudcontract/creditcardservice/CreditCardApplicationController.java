@@ -20,9 +20,9 @@ public class CreditCardApplicationController {
 
         if (creditScoreResponse.isScoreHigh() && request.isCreditCardTypeGold()) {
             return CcApplicationResponse.applicationGranted();
+        } else {
+            return CcApplicationResponse.applicationDenied();
         }
-
-        throw new RuntimeException("Credit card type not yet implemented");
     }
 
     private CreditScoreResponse getCitizenCreditScore(String citizenNumber) {
