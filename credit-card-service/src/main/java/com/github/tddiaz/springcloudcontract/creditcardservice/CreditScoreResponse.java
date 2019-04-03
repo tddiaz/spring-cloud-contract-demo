@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 public class CreditScoreResponse {
 
+    private String uuid;
     private Score score;
 
     public boolean isScoreHigh() {
