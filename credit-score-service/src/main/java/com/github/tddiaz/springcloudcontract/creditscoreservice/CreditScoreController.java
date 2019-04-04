@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 import static com.github.tddiaz.springcloudcontract.creditscoreservice.CreditScoreResponse.Score;
 
 @RestController
@@ -18,7 +20,7 @@ public class CreditScoreController {
 
     @GetMapping("/{citizenNumber}")
     public CreditScoreResponse getScoreByCitizenNumber(@PathVariable String citizenNumber) {
-        return new CreditScoreResponse(creditScoreRepository.findScoreByCitizenNumber(citizenNumber));
+        return new CreditScoreResponse(UUID.randomUUID().toString(), creditScoreRepository.findScoreByCitizenNumber(citizenNumber));
     }
 
     @Component

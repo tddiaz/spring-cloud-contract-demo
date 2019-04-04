@@ -19,8 +19,7 @@ import static org.springframework.cloud.contract.stubrunner.spring.StubRunnerPro
 		"com.github.tddiaz.springcloudcontract" + // group id
 		":credit-score-service" + // artifact id
 		":+" + // latest version will always be downloaded
-		":stubs" + // classifier
-		":8080" // WireMock port//
+		":stubs"
 , stubsMode = LOCAL)
 public class CreditScoreMessagingIntegrationTest {
 

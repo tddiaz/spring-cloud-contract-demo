@@ -7,6 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public class CreditScoreResponse {
 
+    private String uuid;
     private Score score;
     
     public enum Score {
