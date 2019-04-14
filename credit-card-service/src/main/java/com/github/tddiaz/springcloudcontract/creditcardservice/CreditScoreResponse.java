@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 public class CreditScoreResponse {
 
+    private String uuid;
     private Score score;
 
     public boolean isScoreHigh() {
@@ -16,6 +17,6 @@ public class CreditScoreResponse {
     }
 
     public enum Score {
-        HIGH
+        HIGH, LOW
     }
 }

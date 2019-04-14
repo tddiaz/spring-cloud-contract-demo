@@ -13,7 +13,11 @@ public class CcApplicationResponse {
         return new CcApplicationResponse(Status.GRANTED);
     }
 
+    public static CcApplicationResponse applicationDenied() {
+        return new CcApplicationResponse(Status.DENIED);
+    }
+
     public enum Status {
-        GRANTED
+        GRANTED, DENIED
     }
 }

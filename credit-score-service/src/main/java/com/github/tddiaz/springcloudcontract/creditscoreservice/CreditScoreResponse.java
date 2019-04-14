@@ -8,12 +8,8 @@ import lombok.Getter;
 public class CreditScoreResponse {
 
     private Score score;
-
-    public static CreditScoreResponse high() {
-        return new CreditScoreResponse(Score.HIGH);
-    }
-
+    
     public enum Score {
-        HIGH
+        HIGH, LOW
     }
 }
