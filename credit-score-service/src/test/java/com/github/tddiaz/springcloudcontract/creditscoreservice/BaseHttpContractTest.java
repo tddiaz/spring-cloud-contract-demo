@@ -10,7 +10,7 @@ import static com.github.tddiaz.springcloudcontract.creditscoreservice.CreditSco
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
-public class BaseContractTest {
+public class BaseHttpContractTest {
 
     @Before
     public void setup() {
